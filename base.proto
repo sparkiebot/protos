@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "nanopb.proto";
+import "imu.proto"; 
+import "ultrasonic.proto";
+import "ledstrip.proto";
+import "motors.proto";
+import "servo.proto";
+import "aht.proto";
+import "airq.proto";
+
+message PingPong {
+  int32 id = 1; // Unique identifier for the ping
+  bool isPing = 2; // True if this is a ping, false if it's a pong
+}
+
+
+message Message {
+  uint32 topicId = 1; // Topic identifier
+  uint32 timestamp = 2; // Timestamp of the message
+  oneof content {
+    PingPong pingPong = 3; // Ping-Pong message
+    ImuData imuData = 4; // IMU data message
+    UltrasonicData ultrasonicData = 5; // Ultrasonic data message
+    LedstripData ledstripData = 6; // Ledstrip data message
+    MotorCommand motorCommand = 7; // Motor command message
+    MotorStatus motorStatus = 8; // Motor status message
+    ServoData servoData = 9; // Servo data message
+    AhtData ahtData = 10; // AHT data message
+    AirQData airqData = 11; // Air quality data message
+  }
+}
+
+message MessagePacket {
+  repeated Message messages = 1 [(nanopb).max_count = 4]; // List of messages in the packet
+}

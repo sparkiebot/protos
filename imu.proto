@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message ImuData {
+    float a_x = 1;
+    float a_y = 2;
+    float a_z = 3;
+    float g_x = 4;
+    float g_y = 5;
+    float g_z = 6;
+    float m_x = 7;
+    float m_y = 8;
+    float m_z = 9;
+}

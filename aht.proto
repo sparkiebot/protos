@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message AhtData {
+    float temp = 1;
+    float hum = 2;
+}

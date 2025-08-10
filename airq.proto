@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message AirQData {
+    uint32 eco2 = 1; // in ppm
+    uint32 tvoc = 2; // in ppb
+}

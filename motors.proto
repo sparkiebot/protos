@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+
+message MotorCommand {
+    float speed = 1; // Speed in m/s
+}
+
+message MotorStatus {
+    float current_speed = 1;
+    float target_speed = 2;
+    int32 encoder_value = 3;
+}

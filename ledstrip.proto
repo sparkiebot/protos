@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message LedstripData {
+    uint32 layer = 1; // Layer of the LED strip (0: main, 1: notify, 2: misc)
+    uint32 effect = 2; // 0: off, 1: rainbow, 2: breathing, 3: solid
+}

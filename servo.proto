@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message ServoData {
+    float angle_degrees = 1; // Angle of the servo in degrees
+}

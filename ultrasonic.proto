@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message UltrasonicData {
+    uint32 distance_cm = 1; // Distance measured by the ultrasonic sensor in centimeters
+}
