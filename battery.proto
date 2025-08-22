@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message BatteryData {
+    float voltage = 1;
+    bool charging = 2;
+}
