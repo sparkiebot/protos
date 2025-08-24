@@ -8,5 +8,17 @@ message MotorCommand {
 message MotorStatus {
     float current_speed = 1;
     float target_speed = 2;
-    int32 encoder_value = 3;
+    float pid_speed = 3;
+    int32 encoder_value = 4;
+}
+
+message MotorPID {
+    float kp = 1;
+    float ki = 2;
+    float kd = 3;
+}
+
+message SpeedCommand {
+    float linear = 1; // Linear speed in m/s
+    float angular = 2; // Angular speed in rad/s
 }

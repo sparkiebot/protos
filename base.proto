@@ -9,6 +9,7 @@ import "servo.proto";
 import "aht.proto";
 import "airq.proto";
 import "battery.proto";
+import "odometry.proto";
 
 message PingPong {
   int32 id = 1; // Unique identifier for the ping
@@ -26,10 +27,13 @@ message Message {
     LedstripData ledstripData = 6; // Ledstrip data message
     MotorCommand motorCommand = 7; // Motor command message
     MotorStatus motorStatus = 8; // Motor status message
+    MotorPID motorPidCommand = 13; // Motor PID parameters message
+    SpeedCommand speedCommand = 14; // Speed command message
     ServoData servoData = 9; // Servo data message
     AhtData ahtData = 10; // AHT data message
     AirQData airqData = 11; // Air quality data message
     BatteryData batteryData = 12; // Battery data message
+    WheelOdometryData wheelOdometryData = 15; // Wheel odometry data message
   }
 }
 

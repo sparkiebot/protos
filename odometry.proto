@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+message WheelOdometryData {
+    float x = 1; // X position in meters
+    float y = 2; // Y position in meters
+    float theta = 3; // Orientation in radians
+    float linear_velocity = 4; // Linear velocity in m/s
+    float angular_velocity = 5; // Angular velocity in rad/s
+}
